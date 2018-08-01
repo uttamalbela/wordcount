@@ -1,0 +1,22 @@
+<h1>There are {{ wordcount }} words in the text entered by you.</h1>
+<a href="http://google.com"> Go to google </a>
+<br/>
+<a href="{% url 'home' %}"> Start Word Count Again </a>
+
+<h1>Text entered by you:</h1>
+{{ fulltextinhtml }}
+
+<h1>Word count in your text using dictionary:</h1>
+{{ worddictionary }}
+
+<h1>Word count in your text using list:</h1>
+{% for word, wordtotal in wordlist %}
+{{ word }} - {{ wordtotal }}
+<br/>
+{% endfor %}
+
+<h1>Word count in your text using sorted list:</h1>
+{% for word, wordtotal in sortedlist %}
+{{ word }} - {{ wordtotal }}
+<br/>
+{% endfor %}
